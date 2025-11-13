@@ -60,7 +60,16 @@ export type ValidSkills =
   | "FastAPI"
   | "SQL"
   | "NoSQL"
-  | "Framer Motion";
+  | "Framer Motion"
+  | "Scikit-Learn"
+  | "XGBoost"
+  | "Random Forest"
+  | "Numpy"
+  | "Pandas"
+  | "Keras"
+  | "Matplotlib"
+  | "Seaborn"
+  | "Hugging Face";
 
 export type ValidCategory =
   | "Full Stack"
@@ -69,15 +78,22 @@ export type ValidCategory =
   | "UI/UX"
   | "Web Dev"
   | "Mobile Dev"
-  | "3D Modeling";
+  | "3D Modeling"
+  | "AI/ML"
+  | "Deep Learning"
+  | "Classical ML"
+  | "Healthcare"
+  | "E-commerce" 
+  | "Travel";
 
-export type ValidExpType = "Personal" | "Professional";
+export type ValidExpType = "AI/ML" | "Web/Software";
 
 export type ValidPages =
   | "home"
   | "skills"
   | "projects"
-  | "experience"
+  // | "experience"
+  | "education"
   | "contact"
-  | "contributions"
+  // | "contributions"
   | "resume";

@@ -8,13 +8,17 @@ export const routesConfig: any = {
       title: "Projects",
       href: "/projects",
     },
+    // {
+    //   title: "Experience",
+    //   href: "/experience",
+    // },
+    // {
+    //   title: "Contributions",
+    //   href: "/contributions",
+    // },
     {
-      title: "Experience",
-      href: "/experience",
-    },
-    {
-      title: "Contributions",
-      href: "/contributions",
+      title: "Education",
+      href: "/education",
     },
     {
       title: "Contact",

@@ -18,7 +18,7 @@ export const pagesConfig: PagesConfig = {
     description: "Welcome to my portfolio website.",
     metadata: {
       title: "Home",
-      description: "Naman Barkiya's portfolio website.",
+      description: "Azmain Khan Alve's portfolio website.",
     },
   },
   skills: {
@@ -27,7 +27,7 @@ export const pagesConfig: PagesConfig = {
     metadata: {
       title: "Skills",
       description:
-        "Naman Barkiya's key skills that define his professional identity.",
+        "Azmain Khan Alve's key skills that define his professional identity.",
     },
   },
   projects: {
@@ -35,7 +35,7 @@ export const pagesConfig: PagesConfig = {
     description: "Showcasing impactful projects and technical achievements.",
     metadata: {
       title: "Projects",
-      description: "Naman Barkiya's projects in building web applications.",
+      description: "Azmain Khan Alve's projects in building AI/ML applications.",
     },
   },
   contact: {
@@ -43,33 +43,42 @@ export const pagesConfig: PagesConfig = {
     description: "Let's connect and explore collaborations.",
     metadata: {
       title: "Contact",
-      description: "Contact Naman Barkiya.",
+      description: "Contact Azmain Khan Alve.",
     },
   },
-  contributions: {
-    title: "Contributions",
-    description: "Open-source contributions and community involvement.",
-    metadata: {
-      title: "Contributions",
-      description:
-        "Naman Barkiya's open-source contributions and community involvement.",
-    },
-  },
+  // contributions: {
+  //   title: "Contributions",
+  //   description: "Open-source contributions and community involvement.",
+  //   metadata: {
+  //     title: "Contributions",
+  //     description:
+  //       "Azmain Khan Alve's open-source contributions and community involvement.",
+  //   },
+  // },
   resume: {
     title: "Resume",
-    description: "Naman Barkiya's resume.",
+    description: "Azmain Khan Alve's resume.",
     metadata: {
       title: "Resume",
-      description: "Naman Barkiya's resume.",
+      description: "Azmain Khan Alve's resume.",
     },
   },
-  experience: {
-    title: "Experience",
-    description: "Professional journey and career timeline.",
+  // experience: {
+  //   title: "Experience",
+  //   description: "Professional journey and career timeline.",
+  //   metadata: {
+  //     title: "Experience",
+  //     description:
+  //       "Azmain Khan Alve's professional journey and experience timeline.",
+  //   },
+  // },
+  education: {
+    title: "Education",
+    description: "My academic background and qualifications.",
     metadata: {
-      title: "Experience",
+      title: "Education",
       description:
-        "Naman Barkiya's professional journey and experience timeline.",
+        "Azmain Khan Alve's academic background and qualifications.",
     },
   },
 };

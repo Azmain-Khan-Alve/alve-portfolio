@@ -67,6 +67,9 @@ import {
   SiTypescript,
 } from "react-icons/si";
 
+import { FaCode } from "react-icons/fa";
+import { TbBrain } from "react-icons/tb";
+
 export const Icons = {
   contact: Phone,
   gitRepoIcon: BookMarked,
@@ -92,6 +95,8 @@ export const Icons = {
   sun: SunMedium,
   moon: Moon,
   laptop: Laptop,
+  zap : Zap,
+  sparkles : Sparkles,
   menu: Menu,
   chevronDown: ChevronDown,
   laughEmoji: BiLaugh,
@@ -126,6 +131,8 @@ export const Icons = {
   linkedin: SiLinkedin,
   userFill: BiSolidUser,
   work: HiBriefcase,
+  brain: TbBrain,
+  code: FaCode,
   gitHub: ({ ...props }: LucideProps) => (
     <svg
       aria-hidden="true"

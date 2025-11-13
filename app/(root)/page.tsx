@@ -1,4 +1,5 @@
-import { Metadata } from "next";
+"use client";
+// import { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import Script from "next/script";
@@ -20,14 +21,15 @@ import { siteConfig } from "@/config/site";
 import { featuredSkills } from "@/config/skills";
 import { cn } from "@/lib/utils";
 import profileImg from "@/public/profile-img.jpg";
-
-export const metadata: Metadata = {
-  title: `${pagesConfig.home.metadata.title} | Modern Next.js Developer Portfolio Template`,
-  description: `${pagesConfig.home.metadata.description} This open-source Next.js portfolio template is customizable to showcase your skills and projects.`,
-  alternates: {
-    canonical: siteConfig.url,
-  },
-};
+import { education } from "@/config/education";
+import EducationCard from "@/components/education/education-card";
+// export const metadata: Metadata = {
+//   title: `${pagesConfig.home.metadata.title} | Modern Next.js Developer Portfolio Template`,
+//   description: `${pagesConfig.home.metadata.description} This open-source Next.js portfolio template is customizable to showcase your skills and projects.`,
+//   alternates: {
+//     canonical: siteConfig.url,
+//   },
+// };
 
 export default function IndexPage() {
   // Structured data for personal portfolio
@@ -37,8 +39,11 @@ export default function IndexPage() {
     name: siteConfig.authorName,
     url: siteConfig.url,
     image: siteConfig.ogImage,
-    jobTitle: "Full Stack Developer",
-    sameAs: [siteConfig.links.github, siteConfig.links.twitter],
+    jobTitle: "AI/ML Engineer",
+    sameAs: [
+      "https.github.com/Azmain-Khan-Alve",
+      "https://www.linkedin.com/in/azmain-khan-alve/"
+    ],
   };
 
   // Structured data for website as a software application (template)
@@ -59,7 +64,7 @@ export default function IndexPage() {
       url: siteConfig.url,
     },
   };
-
+  
   return (
     <ClientPageWrapper>
       <Script
@@ -75,7 +80,18 @@ export default function IndexPage() {
 
       <section className="space-y-6 pb-8 pt-6 mb-0 md:pb-12 md:py-20 lg:py-32 h-screen flex items-center">
         <div className="container flex max-w-[64rem] flex-col items-center gap-4 text-center -mt-20">
+          {/* ====================================( New update for rounded profile pic) */}
           <Image
+            src={profileImg}
+            height={192}
+            width={192}
+            sizes="192px"
+            className="rounded-full h-48 w-48 border-8 border-primary object-cover"
+            alt="Md. Azmain Khan Alve - AI/ML Engineer Portfolio"
+            priority
+          />
+          {/* ===================================(commented out for rounded profile pic) */}
+          {/* <Image
             src={profileImg}
             height={100}
             width={100}
@@ -83,39 +99,59 @@ export default function IndexPage() {
             className="bg-primary rounded-full mb-0 h-auto md:mb-2 w-[60%] max-w-[16rem] border-8 border-primary"
             alt="Naman Barkiya - Full Stack Developer Portfolio"
             priority
-          />
+          /> */}
+
           <AnimatedText
             as="h1"
             delay={0.2}
             className="font-heading text-3xl sm:text-5xl md:text-6xl lg:text-7xl"
           >
-            Naman Barkiya
+            Azmain Khan Alve
           </AnimatedText>
           <AnimatedText
             as="h3"
             delay={0.4}
             className="font-heading text-base sm:text-xl md:text-xl lg:text-2xl"
           >
-            Full Stack Developer
+            AI/ML Engineer
           </AnimatedText>
           <div className="mt-4 max-w-[42rem] text-center">
             <p className="leading-normal text-muted-foreground text-sm sm:text-base">
-              Open-source Next.js portfolio template. Fork this on GitHub to
-              create your own developer portfolio.
+            Data-driven ML/AI professional with hands-on experience in developing ML and DL models for healthcare. Proficient in Python, PyTorch, TensorFlow, and SQL.
             </p>
           </div>
 
           <div className="flex flex-col mt-10 items-center justify-center sm:flex-row sm:space-x-4 gap-3">
             <AnimatedText delay={0.6}>
               <Link
-                href={"https://github.com/namanbarkiya"}
+                href={"https://github.com/Azmain-Khan-Alve"}
                 target="_blank"
-                className={cn(buttonVariants({ size: "lg" }))}
-                aria-label="View Naman Barkiya's GitHub profile"
+                className={cn(buttonVariants({ variant: "outline", size: "lg" }))}
+                aria-label="View Azmain Khan Alve's GitHub profile"
               >
                 <Icons.gitHub className="w-4 h-4 mr-2" /> GitHub
               </Link>
             </AnimatedText>
+            
+{/* =========================================================================(Adding NEW RESUME BUTTON) */}
+            <AnimatedText delay={0.8}>
+              <Link
+                href={"/resume.pdf"} // This links to the file in /public
+                target="_blank"
+                rel="noopener noreferrer"
+                className={cn(
+                  buttonVariants({
+                    variant: "outline", // Make it the primary color
+                    size: "lg",
+                  })
+                )}
+                aria-label="Download Azmain Khan Alve's Resume"
+              >
+                <Icons.post className="w-4 h-4 mr-2" /> Download Resume
+              </Link>
+            </AnimatedText>
+{/* ========================================================================================== */}
+
             <AnimatedText delay={0.8}>
               <Link
                 href={"/contact"}
@@ -126,7 +162,7 @@ export default function IndexPage() {
                     size: "lg",
                   })
                 )}
-                aria-label="Contact Naman Barkiya"
+                aria-label="Contact Azmain Khan Alve"
               >
                 <Icons.contact className="w-4 h-4 mr-2" /> Contact
               </Link>
@@ -156,7 +192,28 @@ export default function IndexPage() {
             {pagesConfig.skills.description}
           </AnimatedText>
         </div>
-        <SkillsCard skills={featuredSkills} />
+        {/* --- NEW Simple Skills Grid --- */}
+        <div className="flex flex-wrap justify-center items-center gap-4 py-8 max-w-5xl mx-auto">
+          {featuredSkills.slice(0, 20).map((skill, index) => (
+            <div
+              key={index}
+              className="flex flex-col items-center justify-center gap-2 p-4 w-28 h-28 border rounded-lg bg-background"
+            >
+              <Image
+                src={skill.imageUrl} 
+                alt={`${skill.name} logo`}
+                width={40}
+                height={40}
+                className="h-10 w-10"
+              />
+              <span className="text-sm font-medium text-muted-foreground">
+                {skill.name}
+              </span>
+            </div>
+          ))}
+        </div>
+        {/* --- End of new grid --- */}
+        {/* <SkillsCard skills={featuredSkills.slice(0, 6)} /> */}
         <AnimatedText delay={0.4} className="flex justify-center">
           <Link href="/skills">
             <Button variant={"outline"} className="rounded-xl">
@@ -203,13 +260,17 @@ export default function IndexPage() {
             </Button>
           </Link>
         </AnimatedText>
+
+
+{/* ================================================(commented out for hiding contribution section from homepage) */}
+
         {/* <div className="mx-auto text-center md:max-w-[58rem]">
                     <p className="leading-normal text-muted-foreground sm:text-lg sm:leading-7">
                         See all the relevant experiences.
                     </p>
                 </div> */}
       </AnimatedSection>
-      <AnimatedSection
+      {/* <AnimatedSection
         direction="down"
         className="container space-y-6 bg-muted py-10 my-14"
         id="contributions"
@@ -239,8 +300,47 @@ export default function IndexPage() {
             </Button>
           </Link>
         </AnimatedText>
-      </AnimatedSection>
+      </AnimatedSection> */}
+{/* ========================================================================================= */}
+      
+      {/* --- NEW EDUCATION SECTION --- */}
       <AnimatedSection
+        direction="left"
+        className="container space-y-6 bg-muted py-10 my-14"
+        id="education"
+      >
+        <div className="mx-auto flex max-w-[58rem] flex-col items-center space-y-4 text-center">
+          <AnimatedText
+            as="h2"
+            className="font-heading text-3xl leading-[1.1] sm:text-3xl md:text-6xl"
+          >
+            Education
+          </AnimatedText>
+          <AnimatedText
+            as="p"
+            delay={0.2}
+            className="max-w-[85%] leading-normal text-muted-foreground sm:text-lg sm:leading-7"
+          >
+            My academic background and qualifications.
+          </AnimatedText>
+        </div>
+        <div className="mx-auto grid justify-center gap-4 md:w-full lg:grid-cols-3">
+          {education.map((edu, index) => (
+            <AnimatedSection
+              key={edu.id}
+              delay={0.1 * (index + 1)}
+              direction="up"
+            >
+              <EducationCard education={edu} />
+            </AnimatedSection>
+          ))}
+        </div>
+        {/* We don't need a "View All" button for Education, so we remove it. */}
+      </AnimatedSection>
+      {/* --- END OF NEW EDUCATION SECTION --- */}
+
+
+      {/* <AnimatedSection
         direction="left"
         className="container space-y-6 py-10 my-14"
         id="experience"
@@ -278,7 +378,7 @@ export default function IndexPage() {
             </Button>
           </Link>
         </AnimatedText>
-      </AnimatedSection>
+      </AnimatedSection> */}
     </ClientPageWrapper>
   );
 }

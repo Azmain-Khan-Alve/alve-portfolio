@@ -3,6 +3,20 @@ import { ModeToggle } from "@/components/common/mode-toggle";
 import { SiteFooter } from "@/components/common/site-footer";
 import { routesConfig } from "@/config/routes";
 
+//=======================(Newly added)
+import { Metadata } from "next";
+import { pagesConfig } from "@/config/pages";
+import { siteConfig } from "@/config/site";
+
+export const metadata: Metadata = {
+  title: `${pagesConfig.home.metadata.title} | Modern Next.js Developer Portfolio Template`,
+  description: `${pagesConfig.home.metadata.description} This open-source Next.js portfolio template is customizable to showcase your skills and projects.`,
+  alternates: {
+    canonical: siteConfig.url,
+  },
+};
+//======================
+
 interface MarketingLayoutProps {
   children: React.ReactNode;
 }
@@ -10,8 +24,8 @@ interface MarketingLayoutProps {
 export default function MarketingLayout({ children }: MarketingLayoutProps) {
   return (
     <div className="flex min-h-screen flex-col">
-      <header className="container z-50 bg-background">
-        <div className="flex h-20 items-center justify-between py-6">
+      <header className="sticky top-0 z-50 w-full bg-background">
+        <div className="container flex h-20 items-center justify-between py-6">
           <MainNav items={routesConfig.mainNav} />
           <nav className="flex items-center gap-5">
             {/* <Link
