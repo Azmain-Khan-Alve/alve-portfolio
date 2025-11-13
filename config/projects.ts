@@ -552,30 +552,30 @@ export const Projects: ProjectInterface[] = [
 
 // ===============================================================================
   
-{
-  id: "cholo-pothik",
-  companyName: "Cholo Pothik",
-  type: "Web/Software",
-  category: ["Web Dev", "Full Stack", "Travel"],
-  shortDescription: "Full-stack Travel Management System with separate user and admin interfaces.",
-  websiteLink: undefined, // <-- Add link later if you have one
-  githubLink: "https://github.com/Azmain-Khan-Alve/Cholo-Pothik", 
-  techStack: ["PHP", "MySQL", "HTML 5", "CSS 3"],
-  startDate: null, // <-- IMPORTANT: Change this date
-  endDate: null, // <-- IMPORTANT: Change this date
-  companyLogoImg: "/projects/placeholder.png", // <-- IMPORTANT: Add a logo to /public/projects/ and change this path
+// {
+//   id: "cholo-pothik",
+//   companyName: "Cholo Pothik",
+//   type: "Web/Software",
+//   category: ["Web Dev", "Full Stack", "Travel"],
+//   shortDescription: "Full-stack Travel Management System with separate user and admin interfaces.",
+//   websiteLink: undefined, // <-- Add link later if you have one
+//   githubLink: "https://github.com/Azmain-Khan-Alve/Cholo-Pothik", 
+//   techStack: ["PHP", "MySQL", "HTML 5", "CSS 3"],
+//   startDate: null, // <-- IMPORTANT: Change this date
+//   endDate: null, // <-- IMPORTANT: Change this date
+//   companyLogoImg: "/projects/placeholder.png", // <-- IMPORTANT: Add a logo to /public/projects/ and change this path
   
-  pagesInfoArr: [], 
-  descriptionDetails: {
-    paragraphs: [
-      "A full-stack Travel Management System built from scratch, featuring separate, secure interfaces for both users and administrators."
-    ],
-    bullets: [
-      "User Interface: Features user authentication, destination search, hotel booking capabilities, and a feedback system.",
-      "Admin Interface: Provides full Create, Read, Update, and Delete (CRUD) operations for managing places, hotels, and travel agents."
-    ],
-  },
-},
+//   pagesInfoArr: [], 
+//   descriptionDetails: {
+//     paragraphs: [
+//       "A full-stack Travel Management System built from scratch, featuring separate, secure interfaces for both users and administrators."
+//     ],
+//     bullets: [
+//       "User Interface: Features user authentication, destination search, hotel booking capabilities, and a feedback system.",
+//       "Admin Interface: Provides full Create, Read, Update, and Delete (CRUD) operations for managing places, hotels, and travel agents."
+//     ],
+//   },
+// },
 
 // ===============================================================================
 
