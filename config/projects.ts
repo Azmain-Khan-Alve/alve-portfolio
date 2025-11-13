@@ -66,7 +66,7 @@ export const Projects: ProjectInterface[] = [
   category: ["Web Dev", "Full Stack", "E-commerce"],
   shortDescription: "End-to-end e-commerce platform for medicine sales, featuring a full admin dashboard with business insights.",
   websiteLink: undefined, // <-- Add link later if you have one
-  githubLink: undefined, // <-- Add your GitHub link here
+  githubLink: "https://github.com/Azmain-Khan-Alve/Cloud-Pharma", // <-- Add your GitHub link here
   techStack: ["Django", "PostgreSQL", "Bootstrap", "HTML 5", "CSS 3"],
   startDate: null, // As requested
   endDate: null,   // As requested
@@ -964,7 +964,61 @@ export const Projects: ProjectInterface[] = [
     ],
   },
 },
-
+// ...
+{
+  id: "cholo-pothik",
+  companyName: "Cholo Pothik (Travel Management System)",
+  type: "Web/Software",
+  category: ["Web Dev", "Full Stack", "Travel"],
+  shortDescription: "A full-stack travel platform in PHP/MySQL. I built the complete authentication system and the entire admin dashboard for content management.",
+  websiteLink: undefined, // <-- Add link later if you have one
+  githubLink: "https://github.com/Azmain-Khan-Alve/Cholo-Pothik", // From your report
+  techStack: ["PHP", "MySQL", "HTML 5", "CSS 3"],
+  startDate: null, // As requested
+  endDate: null,   // As requested
+  companyLogoImg: "/projects/cholo-pothik-logo.png", // <-- IMPORTANT: Add a logo to /public/projects/ and change this
+  
+  // --- PASTE THIS NEW CASE STUDY ---
+  descriptionDetails: {
+    paragraphs: [
+      "A comprehensive, full-stack travel portal built from scratch in PHP and MySQL. The platform allows users to browse and book travel packages, while providing a secure backend for administrators to manage all site content.",
+      "My core contribution was building the project's 'brain.' I developed the entire secure authentication system (user signup, login, admin-only access) and the complete admin dashboard, which gives administrators full CRUD (Create, Read, Update, Delete) control over hotels, places, and travel agents."
+    ],
+    bullets: [
+      "Developed the complete user and admin authentication/session logic in PHP.",
+      "Built the full admin-side dashboard for viewing all site data (customers, bookings, etc.).",
+      "Engineered the backend logic (Insert, Delete, Update) for managing all travel content.",
+      "Personally responsible for the 'Authentication' and 'Admin Dashboard' modules as outlined in the project report."
+    ],
+  },
+  pagesInfoArr: [
+    {
+      title: "Secure Authentication (Login/Signup)",
+      description: "Backend code snippets for user signup and secure login (Fig. 17 & 18 from report).",
+      imgArr: [
+        "/projects/cholo-pothik/fig17_signin.png",
+        "/projects/cholo-pothik/fig18_signup.png"
+      ]
+    },
+    {
+      title: "Admin Dashboard Operations (Backend)",
+      description: "Backend logic for the admin's content management operations (Fig. 19 from report).",
+      imgArr: [
+        "/projects/cholo-pothik/fig19_admin_op.png"
+      ]
+    },
+    {
+      title: "Core Booking & Search Logic (Backend)",
+      description: "Backend snippets for the site's core search and booking functionality (Fig. 20 & 22 from report).",
+      imgArr: [
+        "/projects/cholo-pothik/fig20_search.png",
+        "/projects/cholo-pothik/fig22_booking.png"
+      ]
+    }
+  ]
+  // --- END OF NEW CASE STUDY ---
+},
+// ...
 ];
 
 export const featuredProjects = Projects.slice(0, 3);
